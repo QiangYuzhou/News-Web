@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title> 修改</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="stylesheets/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="stylesheets/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="stylesheets/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="stylesheets/animate.css" rel="stylesheet">
+    <link href="stylesheets/style.css?v=4.1.0" rel="stylesheet">
+    <!-- 全局js -->
+    <script src="javascripts/jquery.min.js?v=2.1.4"></script>
+    <script src="javascripts/bootstrap.min.js?v=3.3.6"></script>
+
+    <script type="text/javascript" src="javascripts/jquery.cookie.js"></script>
+    <script type="text/javascript">
+        function submit(){
+            var op1=$("#op1 option:selected").text();
+            var op2=$("#op2 option:selected").text();
+            var op3=$("#op3 option:selected").text();
+            var op4=$("#op4 option:selected").text();
+            $.post("/setData",   //发送post请求，存储注册用户
+            {
+                user:$.cookie('user'),
+                op1:op1,
+                op2:op2,
+                op3:op3,
+                op4:op4
+            },
+            function(data,status){
+                alert(data);
+                if(data=="success")
+                    window.location.assign("/index");
+            });
+        }
+    </script>>
+
+</head>
+
+<body class="gray-bg">
+ <div class="middle-box text-center loginscreen   animated fadeInDown">
+        <div>
+            <div>
+
+                <h1 class="logo-name">强</h1>
+
+            </div>
+            <p>修改您的感兴趣的新闻</p>
+            <form class="m-t" role="form" action="login.html">
+                <div class="row form-group">
+                    <label class="col-sm-3 control-label">标签1：</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" id="op1">
+                            <option>null</option>
+                            <option>即时</option>
+                            <option>大陆</option>
+                            <option>国际</option>
+                            <option>台湾</option>
+                            <option>社会</option>
+                            <option>军事</option>
+                            <option>港澳</option>
+                            <option>历史</option>
+                            <option>财经</option>
+                            <option>娱乐</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="col-sm-3 control-label">标签2：</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" id="op2">
+                            <option>null</option>
+                            <option>即时</option>
+                            <option>大陆</option>
+                            <option>国际</option>
+                            <option>台湾</option>
+                            <option>社会</option>
+                            <option>军事</option>
+                            <option>港澳</option>
+                            <option>历史</option>
+                            <option>财经</option>
+                            <option>娱乐</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="col-sm-3 control-label">标签3：</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" id="op3">
+                            <option>null</option>
+                            <option>即时</option>
+                            <option>大陆</option>
+                            <option>国际</option>
+                            <option>台湾</option>
+                            <option>社会</option>
+                            <option>军事</option>
+                            <option>港澳</option>
+                            <option>历史</option>
+                            <option>财经</option>
+                            <option>娱乐</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="col-sm-3 control-label">标签4：</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" id="op4">
+                            <option>null</option>
+                            <option>即时</option>
+                            <option>大陆</option>
+                            <option>国际</option>
+                            <option>台湾</option>
+                            <option>社会</option>
+                            <option>军事</option>
+                            <option>港澳</option>
+                            <option>历史</option>
+                            <option>财经</option>
+                            <option>娱乐</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <button type="button" onclick="submit()" class="btn btn-primary block full-width m-b">提交</button>
+        </div>
+    </div>
+
+
+   <div class="col-md-6">
+    <div class="form-group">
+
+    
+    
+    
+
+</body>
+
+</html>

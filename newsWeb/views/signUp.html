@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title> - 登录</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheets/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="stylesheets/animate.css" rel="stylesheet">
+    <link href="stylesheets/style.css" rel="stylesheet">
+    <link href="stylesheets/login.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+    <script>
+        if (window.top !== window.self) {
+            window.top.location = window.location;
+        }
+    </script>
+    <script type="text/javascript" src="javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/signUp.js"></script>
+</head>
+
+<body class="signin">
+    <div class="signinpanel">
+        <div class="row">
+            <div class="col-sm-12">
+                <form method="post" action="index.html">
+                    <h4 class="no-margins">Please input your infomation!</h4>
+                    <p class="m-t-md">Sign Up：</p>
+                    <input type="text" id="user" class="form-control uname" placeholder="用户名" />
+                    <input type="password" id="pwd1" class="form-control pword m-b" placeholder="密码" />
+                    <input type="password" id="pwd2" class="form-control pword m-b" placeholder="再次输入密码" />
+                    <input type="text" id="email" class="form-control " placeholder="邮箱" />
+                    <button type="button" class="btn btn-success btn-block" onclick="submitInfo()">submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="signup-footer">
+            <div class="pull-left">
+                &copy; hAdmin
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
